@@ -1,0 +1,48 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Raport ze sprzedaży</title>
+</head>
+<body>
+	<script>
+		// plik 9.2 monthlysales.html
+		// program pobiera wartości transakcji z każdego miesiąca
+		// następnie wyświetla łączną wartość dla poszczególnych miesięcy
+		
+		var months = new Array(12);
+		var monthSales =  new Array(12);
+		
+		// tablice months[] i monthSales[] to --> tablice równoległe
+		// tablice równoległe--> mają po tyle samo elementów, a poszczególne elementy
+		// z jedenj tablicy odpowiadają elementom z drugiej
+		
+		months[0] = "Styczeń";
+		months[1] = "Luty";
+		months[2] = "Marzec";
+		months[3] = "Kwiecień";
+		months[4] = "Maj";
+		months[5] = "Czerwiec";
+		months[7] = "Lipiec";
+		months[8] = "Sierpień";
+		months[9] = "Wrzesień";
+		months[10] = "Pańdziernik";
+		months[11] = "Listopad";
+		months[12] = "Grudzień";
+		
+		for (i = 0; i < 12; i++)
+		{
+			enter$zł = "Podaj wartość transakcji z następującego miesiąca ";
+			enter$zł += months[i];
+			monthSales[i] = prompt(enter$zł);
+		}
+		
+		
+		for (i = 0; i < 12; i++)
+		{
+			document.write(months[i]+" - sprzedaż w tym miesiącu ");
+			document.write(monthSales[i]+" zł <br>");
+		}
+	
+	</script>
+</body>
+</html>

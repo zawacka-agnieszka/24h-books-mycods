@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>Zdjęcia- travel</title>
+    
+    <script>
+/*kod nie działa poprawnie
+nie da się zmienić szerokości zdjęć
+wyświetlania czasu również
+nie pokazuje wszystkich zdjęć
+przykład z książki- do kitu :( 
+!!! w VSC w ogóle nie działa !!!
+pokazuje błęd 35 i 40 ale tam nie ma błędu*/
+        // Tablica zdjęć
+        var photos = new Array();
+        photos[0] = new Image();
+        photos[0].src = "1travel.jpg";
+        photos[1] = new Image();
+        photos[1].src = "south-korea.jpg";
+        photos[2] = new Image();
+        photos[2].src = "southkorea.jpg";
+        photos[3] = new Image();
+        photos[3].src = "thailand.jpg";
+        photos[4] = new Image();
+        photos[4].src = "Inthailand.jpg";
+        photos[5] = new Image();
+        photos[5].src = "%thailand.jpg";
+        photos[6] = new Image();
+        photos[6].src = "Vietnam Halong Bay.jpg";
+        photos[7] = new Image();
+        photos[7].src = "vietnam.jpg";
+        photos[8] = new Image();
+        photos[8].src = "Unexplored-Vietnam-01.jpg";
+        photos[9] = new Image();
+        photos[9].src = "traveling-is-awesome.jpg";
+        photos[10] = new Image();
+        photos[10].src = "travel-quotes-diane-arbus.jpg";
+        
+        var i=0;
+        function rotator() {
+            document.getElementById("image1").src = photos[i].src;
+            i++;
+            if (i == photos.lenght) {
+                i = 0;
+            }
+            setTimeout(function() { rotator(); }, 2000);
+        }
+  
+	</script>
+</head>
+
+<body onload = "rotator('image1', photos);" >
+    <h1>CZAS NA ZDJĘCIAAA :D</h1>
+    Chętnie zobaczę tę miejsca na żywo, te trzy pierwsze kraje...
+    <div id="img"> <img id="image1" height="600px" width="400px"
+        border="5" style="border-color: white;" /></div>
+
+</body>
+</html>

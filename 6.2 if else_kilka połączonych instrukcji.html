@@ -1,0 +1,36 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Rozgałęzienia za pomocą ->  instrukcji if (kilka instrukcji)</title>
+</head>
+<body>
+	<script>
+	//Program ilustrujący kilka połączonych -> instrukcji if oraz else
+	var bdate = prompt("Którego dnia miesiąca się urodziłeś?");
+	if (bdate <= 7)
+	{
+		document.write("Pierwszy tydzień miesiąca");
+	}
+	else if (bdate <= 18)
+	{
+		document.write("Środek miesiąca");
+	}
+	else if (bdate <= 31)
+	{
+		document.write("Koniec miesiąca");
+	}
+	else
+	{
+		document.write("To chyba nie jest poprawny dzień miesiąca");
+	}
+	/* podobny sposób switch
+	->sprawdzanie kilku możliwych warunków lub
+	->wartości jednej zmiennej
+	
+	instrukcja switch -----> przeczytaj...
+	http://webmaster.helion.pl/index.php/kjs-cechy-jezyka/kjs-instrukcje/kursjs-instrukcja-wyboru-switch
+	*/
+	</script>
+		
+</body>
+</html>

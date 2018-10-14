@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Miasto i województwo pochodzenia</title>
+</head>
+<body>
+	<script>
+	//pytanie miasto województwo, wyświetlenie w formacie: miasto, województwo
+	
+	var town = prompt ("Z jakiego miasta pochodzisz?");					//zapytanie miasto
+	
+	var state = prompt ("Z jakiego województwie się urodziłeś?");		//zapytanie województwo
+	
+	var fullLocation = town + ", " + state;								// zmienna z separatorem ", "
+	
+	alert("Pochodzisz z " + fullLocation + " :) ");						// wyświetlenie tego całego komunikatu na ekranie
+	
+	</script>
+		
+</body>
+</html>

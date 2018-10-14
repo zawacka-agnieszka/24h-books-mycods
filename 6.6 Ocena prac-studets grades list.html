@@ -1,0 +1,29 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Ocena prac studentów</title>
+</head>
+<body>
+	<script>
+	//program wyświetla pytanie o to, ilu uczniów liczy klasa
+	//potem pobiera imiona i oceny
+	
+	var names = new Array(); //array =szyk
+	var grades = new Array();
+	var students = prompt("Ilu uczniów ma ta klasa? ");
+	
+	for (i = 0; i <students; i++)
+	{
+	names[i] = prompt("Wprowadź imie uczunia: ");
+	grades[i] = prompt("Ile punktów uzyskała ta osoba: ");
+	}
+	
+	for (i = 0; i <students; i++)
+	{
+	document.write(names[i]+ ": liczba punktów to " +grades[i]+ "!<br>" );
+	}
+	
+	</script>
+		
+</body>
+</html>

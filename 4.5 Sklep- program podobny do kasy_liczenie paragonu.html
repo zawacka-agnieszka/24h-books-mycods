@@ -1,0 +1,45 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title> Witamy w naszym sklepie</title>
+</head>
+<body>
+	<script>
+	// Plik -> 4.5 Sklep- program podobny do kasy_liczenie paragonu.html
+	// zastosowanie danych wejściowych i wyjściowych
+	// Program wyświetla prośbe o informacj o sprzedanych produktach
+	
+	document.write("Heeejj, witamy u nas w sklepie :D<br>");
+	document.write("Zapaszamy do kasy!<br><br>");
+	candy = prompt("Ile batoników zakupiono?");
+	soda = prompt("Ile puszek napoju zakupiono?");
+	flower = prompt("Ile kwiatków zakupiono?");
+	
+	//ten program bierze każdą wartość i mnoży ją przez jednostkową cene danego produktu
+	candytotal = candy * 1.00;
+	sodatotal = soda * 1.50;
+	flowertotal = flower * 3.59;
+	
+	subtotal = candytotal + sodatotal + flowertotal;
+	
+	tax = subtotal * .0725; 		// podatek od towarów i usług 7,25%
+	
+	receipt = "Produkt       Ilość       Wartość\n";
+	receipt += "------------------------------\n";
+	receipt += "Baton              " + candy + "         " + candytotal + " zł";
+	receipt += "\n";
+	receipt += "Napój              " + soda +  "         " + sodatotal + " zł";
+	receipt += "\n";
+	receipt += "Kwiaty              " + flower + "        " + flowertotal + " zł";
+	receipt += "\n";
+	receipt += "------------------------------\n";
+	receipt += "Netto                  " + subtotal + " zł";
+	receipt += "\nPodatek              " +  tax + " zł";
+	receipt += "\nBrutto                 " + (subtotal + tax ) + " zł";
+	receipt += "\n\n! MIŁEGO DNIA !\n";
+
+	alert(receipt);
+	</script>
+		
+</body>
+</html>

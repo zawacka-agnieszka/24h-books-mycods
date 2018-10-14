@@ -1,0 +1,25 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Program do podawania imienia i nazwiska</title>
+</head>
+<body>
+	<script>
+	// plik 4.4 wprowadz imie_entername
+	// Program wyświetla użytkownikowi pytanie o imie i nazwisko
+	// następnie wyświetla je w formacie ("imie nazwisko" oraz) "nazwisko, imie"
+	
+	var fname = prompt ("Jak masz na imie? "); 			// użytkownik może wpisać imie
+	
+	var lname = prompt ("Jak masz na nazwisko? "); 		// użytkownik może wpisać nazwisko	
+	
+	
+	// Tworzenie zmiennej z separatorem w postaci po przecinku
+	// by wświetlić dane w formacie ("imie nazwisko" oraz) "nazwisko, imie"
+	var commasep = ", ";
+	alert("Najpierw imię: " + fname + " " + lname);
+	alert("Najpierw nazwisko: " + lname + commasep + fname);
+	
+	</script>
+</body>
+</html>

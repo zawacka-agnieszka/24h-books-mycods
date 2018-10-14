@@ -1,0 +1,39 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Zgadnij liczbe</title>
+</head>
+<body>
+	<script>
+	
+	// Generuje liczbe losową z przedziału 1 - 100
+	// pobiera od użytkownika próby odgadnięcia
+	// do czasu uzyskania poprawnej odpowiedzi
+	
+	// nie działa w Chromie, 
+	// działa w IE oraz Firefox
+	
+	var numberr = Math.floor(Math.random()*100)+1;
+	var tries = 0;
+	
+	alert ("TO ZABAWA W ZGADYWANIE");
+	alert ("Mam na myśli liczbę z przedziału od 1 do 100");
+	var guess = 0;
+	do {
+		guess = prompt("Jak sądzisz, co to za liczba?");
+		
+		if (guess < numberr) {
+			document.write(guess+ " to za niska wartość! Spróbój jeszcze raz :)");
+			document.write("<br>");
+		}
+		else if (guess > numberr) {
+			document.write(guess+ " to za wysoka wartość! Spróbój jeszcze raz :)");
+			document.write("<br>");
+		}
+		tries++;
+	} while (guess != numberr);
+	alert("Udało Ci się! Liczba prób to "+ tries +".");
+
+	</script>
+</body>
+</html>

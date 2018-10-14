@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Sortowanie bąbelkowe</title>
+</head>
+<body>
+	<script>
+		// plik 9.4 Sortowanie bąbelkowe(bubble sort) mała-duża.html
+		// Wykorzystanie algorytmu sortowania bąbelkowego do posortowania zbioru wartości
+		
+		var values = new Array(10, 54, 34, 21, 23);
+		var temp;
+		
+		for (pass = 0; pass < 5; pass++)				//pętla zewnętrzna
+		{
+		
+			for (ctr = 0; ctr < 5; ctr++)				//pętla wewnętrzna z porównaniami
+			{
+				if (values[ctr] > values[ctr+1])		// porównanie
+				{
+					temp = values[ctr];                 //  |  przestawianie wartości
+					values[ctr] = values[ctr+1];        //  |  użycie trzeciej zmiennej czyli zmiennej temp
+					values[ctr+1] = temp;     			//  |     temp <- zmienna pomocnicza/tymczasowa 
+				}
+			}
+		}
+		
+		
+		// Po zkończeniu obu pętli teraz można wyświetlić  posortowaną tablicę   ▼
+		document.write("Tablica po posortowaniu... <br>");
+		for (i = 0; i <5; i++)
+		{
+			document.write(values[i]+ "<br>");
+		}
+		
+		
+			/* By zrobić aby tablica sortowała od wiekszej do mniejszej to należy przestawić jedną instrukcje w pętli for
+			nowa wersja wiersza ---> if (values[ctr] < values[ctr+1])	
+								przestawiony jest znak > na znak <
+			*/
+			
+	</script>
+</body>
+</html>

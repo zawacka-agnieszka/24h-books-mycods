@@ -1,0 +1,38 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Wyszukiwanie sekwencyjne- magazyn</title>
+</head>
+<body>
+	<script>
+		//plik 9.5 Wyszukiwanie sekwencyjne.html
+		// wyszukiwanie sekwencyjne w celu określenia opisu i ceny produktu
+		// założenie: tablice zostały już wypełnione
+		// ---> ten kod powienien być częścią większego programu obsługi magazynu
+		
+		// zmienna TotalNumber -> zawiera łączną liczbę produktów w magazynie (czyli tym samym elementów w tablice)
+		// najpierw należy pobać nume części szukanej przez użytkownika
+		
+		searchPart = prompt("Podaj numer części, którą chcesz sprawdzić: ");
+		foundPart = 0;											// flaga informująca, czy znaleziono szukaną rzecz
+		for (i = 0; i < TotalNumber; i++)						// sprawdzanie wszystkich elementów magazynu
+		{
+			if (partNo[i] = searchPart)
+			{
+				document.write ("To opies części nr "+searchPart+ ":");
+				document.write (desc[i]);
+				document.write ("Cena części wynosi: "+price[i]);
+				foundPart = 1;									// ustawnienie flagi na wartość 1
+				break;
+			}
+		}
+		
+		// Sprawdzanie flagi foundPart w celu ustalenia, czy część została znaleziona
+		if (foundPart == 0)									
+		{
+			document.write("Niestety w magazynie nie ma części o podanym numerze.");
+		}
+		
+	</script>
+</body>
+</html>

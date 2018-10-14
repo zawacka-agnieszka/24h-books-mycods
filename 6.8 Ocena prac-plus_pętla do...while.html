@@ -1,0 +1,38 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>OCENIANIE PRAC</title>
+</head>
+<body>
+	<script>
+	//program wykonuje pętle do momentu, w którym nauczyciel nie ma już uczniów do wprowadzenia
+	
+	// ---> pętla do...while przed sprawdzeniem waunku jest uruchamiania przynajmniej raz
+	// pętla while- najpierw jest sprawdzany warunek, a potem następuje uruchomnienie kodu
+
+	var names = new Array(); //array =szyk
+	var grades = new Array();
+	var ans = 'T';
+	i = 0;
+	total = 0;
+	
+	do
+	{
+		names[i] = prompt("Wprowadź imie uczunia: ");
+		grades[i] = prompt("Ile punktów uzyskała ta osoba: ");
+		total += parseFloat(grades[i]);
+		ans =  prompt("Czy chcesz wprowadzić kolejne wyniki? (T/N)");
+		i++;
+	} while (ans == 'T')
+	
+	for (j = 0; j < i; j++)
+	{
+		document.write(names[j]+ ": liczba punktów to " +grades[j]+ "!<br>" );
+	}
+	
+	average = total / j;
+	document.write("<p>Średnia klasy wynosi: "+average);
+	</script>
+		
+</body>
+</html>

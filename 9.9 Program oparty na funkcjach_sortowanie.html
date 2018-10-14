@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Program oparty na funkcjach</title>
+	
+	<script>
+	
+		// Pobieranie wartości do posortowania
+		function askForData(values, size) {
+			for (i = 0; i < size; i++){
+				values[i] = parseFloat(prompt("Wprowadź liczbę: "));
+			}
+		}
+		
+		// Podwójna pętla for z sortowaniem opartm na porównaniach -> sortowanie bąbelkowe
+		function sortData(values, size) {
+			for (pass = 0; pass < size; pass++) {				// pętla zewnętrzna
+				for (ctr = 0; ctr < size; ctr++) {				// pętla wewnętrzna z porównaniami
+					if (values[ctr]> values[ctr+1])				// porównanie
+					{
+						temp = values[ctr];						//  |  przestawianie wartości
+						values[ctr] = values[ctr+1];			//  |  użycie trzeciej zmiennej czyli zmiennej temp
+						values[ctr+1]= temp;					//  |     temp <- zmienna pomocnicza/tymczasowa 
+					}
+				} 
+			}
+		}
+		
+		// Wyświetlenie wartości
+		function printData(values, size) {
+			
+			for (i = 0; i < size; i++) {
+				document.write(values[i]+ "<br>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<script>
+		// plik 9.9 Program oparty na funkcjach_sortowanie.html
+		// Program wykorzystuje funkcje do pobrania zbioru wartości i ich posortowania
+		
+		var size = prompt("Ile liczb chcesz podać?");
+		Values = new Array(size);								// stworzenie tablicy
+		
+		askForData(Values, size);								// pobieranie danych
+		
+		document.write("Przed sortowaniem<br>");
+		printData(Values, size);								// wyświetlenie danych -> nieposortowane
+		
+		sortData(Values, size);									// posortowanie danych
+		
+		document.write("Po sortowaniu<br>");
+		printData(Values, size);								// wyświetlenie danych -> posortowane
+		
+ 		
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>U Zosi :) </title>
+    
+    <script>
+        // tworzenie przewijanego komunikatu- (może być dowolna ilość info)
+        var scrollMsg = "Sklep jest otwarty od 7.00 do 24.00. ";
+        scrollMsg += "Oferujemy największy wybór produktów w ";
+        scrollMsg += " obszarze trzech województw. ";
+        scrollMsg += "Nikt nie pobije naszych cen! ";
+        scrollMsg += " !!! Zapraszamy !!!! ";
+        scrollMsg += " !!! Zapraszamy !!!! ";
+        scrollMsg += " !!! Zapraszamy !!!! ";
+
+
+        // informacje o trzech produktach
+        function produkt1Info() {
+            alert("Produkt na lato! Wyprzedaż do końca wakacji- jedynie 9,99 zł.");
+        }
+        function produkt2Info() {
+            alert("Naprawde tego potrzebujesz! Okazja jedynie 49zł... Promocja!");
+        }
+        function produkt3Info() {
+            alert("Może być Twój już za jedynie 9,99 zł.");
+        }
+
+        // funckcja przewijania komunikatu
+        var beginPos = 0;
+        function scrollingMsg() {
+            document.msgForm.scrollingMsgBox.value = scrollMsg.substring(beginPos, scrollMsg.length)+scrollMsg.substring(0, beginPos);
+            beginPos = beginPos + 1;
+            if (beginPos > scrollMsg.length) {
+                beginPos = 0
+            }
+            window.setTimeout("scrollingMsg()", 130)
+        }
+	</script>
+
+</head>
+<body BGCOLOR="darksalmon" onload="scrollingMsg()">
+    <h1>U Zosi<br>Kupuj u nas!</h1>
+    Mamy wszytko czego potrzebujesz <br>
+   <p>
+    <img src ="produkt1.jpg" height="300px" width="300px"
+    border="2" style="border-color:blue;" onmouseover="produkt1Info()" /></div>
+    <img src ="produkt2.jpg" height="300px" width="300px"
+    border="2" style="border-color:black;" onmouseover="produkt2Info()" /></div>
+    <img src ="produkt3.jpg" height="300px" width="300px"
+    border="2" style="border-color:red;" onmouseover="produkt3Info()" /></div>
+
+    <form name="msgForm">
+        <input  type="text"  name="scrollingMsgBox" size="142">
+    </form>
+
+    <p>&nbsp;</p>
+    <center><p><b>Dziękujemy za zakupy U Zosi</b></p></center>
+</body>
+</html>

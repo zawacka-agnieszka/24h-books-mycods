@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Rozgałęzienia za pomocą ->  instrukcji if</title>
+</head>
+<body>
+	<script>
+	// program który decyduje, jaką premię i dni wolne wypłacić sprzedawcy
+	
+	var salesname = prompt("Podaj imię sprzedawcy: ");
+	var salestotal = prompt("Podaj obrót z ostatniego miesiąca: ");
+	
+	if (salestotal < 3000)
+	{
+	bonus = 0;
+	daysOffsOff = 0;
+	}
+	else
+	{
+	bonus = 100;
+	daysOff = 3;
+	}
+	
+	document.write(salesname+ " otrzymł premię ");
+	document.write(bonus+ " zł i "+daysOff);
+	document.write(" dni urlopu.<p>");
+	</script>
+		
+</body>
+</html>
